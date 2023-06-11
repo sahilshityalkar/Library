@@ -31,3 +31,7 @@
 
     mainContent.appendChild(bookDiv);
   }
+
+  // Event listener for the create button
+  const createButton = document.getElementById('create-button');
+  createButton.addEventListener('click', openNewBookWindow);
