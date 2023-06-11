@@ -25,6 +25,31 @@ function openNewBookWindow() {
     authorInput.setAttribute('type', 'text');
     authorInput.setAttribute('placeholder', 'Author');
 
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Add Book';
+    addButton.classList.add('add-button');
+    addButton.addEventListener('click', function() {
+      const name = nameInput.value;
+      const pages = pagesInput.value;
+      const author = authorInput.value;
+
+      if (name && pages && author) {
+        createBook(name, pages, author);
+        nameInput.value = '';
+        pagesInput.value = '';
+        authorInput.value = '';
+      } else {
+        alert('Please enter all book details.');
+      }
+    });
+
+    bookDiv.appendChild(nameInput);
+    bookDiv.appendChild(pagesInput);
+    bookDiv.appendChild(authorInput);
+    bookDiv.appendChild(addButton);
+
+    const mainContent = document.getElementById('main-content');
+    mainContent.appendChild(bookDiv);
   }
 
   // Function to create a new book element
