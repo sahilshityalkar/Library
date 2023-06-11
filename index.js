@@ -9,6 +9,24 @@
 //   // do stuff here
 // }
 
+function openNewBookWindow() {
+    const bookDiv = document.createElement('div');
+    bookDiv.classList.add('book');
+
+    const nameInput = document.createElement('input');
+    nameInput.setAttribute('type', 'text');
+    nameInput.setAttribute('placeholder', 'Book Name');
+
+    const pagesInput = document.createElement('input');
+    pagesInput.setAttribute('type', 'text');
+    pagesInput.setAttribute('placeholder', 'Number of Pages');
+
+    const authorInput = document.createElement('input');
+    authorInput.setAttribute('type', 'text');
+    authorInput.setAttribute('placeholder', 'Author');
+
+  }
+
   // Function to create a new book element
   function createBook(name, pages, author) {
     const mainContent = document.getElementById('main-content');
