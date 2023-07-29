@@ -1,1 +1,1 @@
-
+The Library Management System is a web-based application designed to help users manage and organize their book collections. The project allows users to perform various tasks related to library operations, including adding, updating, and deleting books, as well as searching for specific books based on different criteria.
